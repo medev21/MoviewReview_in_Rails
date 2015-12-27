@@ -1,0 +1,6 @@
+<%= simple_form_for @movie do |form| %>
+  <%= form.input :title, label: 'Movie Title'%>
+  <%= form.input :director %>
+  <%= form.input :description %>
+  <%= form.button :submit %>
+<% end %>
