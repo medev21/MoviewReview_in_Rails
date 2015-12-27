@@ -35,6 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 ######added by admin############
 gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
+gem 'devise', '~> 3.5', '>= 3.5.3'
 ################################
 
 group :development, :test do
