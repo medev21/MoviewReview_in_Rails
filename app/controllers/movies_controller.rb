@@ -22,6 +22,7 @@ class MoviesController < ApplicationController
       render 'new'
     end
   end
+
   def show
   end
 
@@ -29,6 +30,7 @@ class MoviesController < ApplicationController
   end
 
   def update
+    
     if @movie.update(movie_params)
       redirect_to movie_path(@movie)
     else
