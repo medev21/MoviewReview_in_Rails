@@ -1,3 +1,9 @@
 <h1>Edit Movie Review</h1>
 
-<%= render 'form' %>
+<%= simple_form_for @movie, :html => {:multipart => true} do |form| %>
+  <%= form.select :category_id, @categories %>
+  <%= form.input :title, label: 'Movie Title'%>
+  <%= form.input :director %>
+  <%= form.input :description %>
+  <%= form.button :submit %>
+<% end %>

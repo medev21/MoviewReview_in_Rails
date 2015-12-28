@@ -1,4 +1,4 @@
-<%= simple_form_for @movie do |form| %>
+<%= simple_form_for @movie, :html => {:multipart => true} do |form| %>
   <%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a category") %>
   <%= form.input :title, label: 'Movie Title'%>
   <%= form.input :director %>
