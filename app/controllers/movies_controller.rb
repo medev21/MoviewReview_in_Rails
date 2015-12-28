@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
   def create
     # @movie = Movie.new(movie_params)
     @movie = current_user.movies.build(movie_params)
-    @categories = Category.all.map{|c| [c.name, c.id]}
+    @movie.category_id = params[:category_id]
 
     if @movie.save
       redirect_to root_path
