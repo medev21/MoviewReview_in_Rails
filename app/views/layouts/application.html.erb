@@ -29,7 +29,8 @@
           aria-haspopup="true" aria-expanded="false">Categories<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <% Category.all.each do |category| %>
-            <li><%= link_to category.name, movies_path(category: category.name),
+            <!-- adding active higlight when filtering a category -->
+            <li class="<%= 'active' if params[:category] == category.name %>"><%= link_to category.name, movies_path(category: category.name),
             class: "link"%></li>
             <% end %>
           </ul>
