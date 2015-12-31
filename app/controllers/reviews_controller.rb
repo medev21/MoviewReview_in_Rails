@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
 
   before_action :find_movie
-  before_action :only [:edit, :update, :destroy]
+  before_action :find_review, only: [:edit, :update, :destroy]
 
   def new
     @review = Review.new

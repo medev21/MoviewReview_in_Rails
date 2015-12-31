@@ -15,7 +15,9 @@
 <div class="row">
   <div class="col-md-4">
     <%= render @movie.reviews %>
-    <%= link_to "Add Review", new_movie_review_path(@movie) %>
+    <div>
+      <%= link_to "Add Review", new_movie_review_path(@movie) %>
+    </div>
   </div>
 </div>
 
