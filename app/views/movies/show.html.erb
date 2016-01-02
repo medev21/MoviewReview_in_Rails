@@ -22,6 +22,7 @@
 </div>
 
 <%= link_to 'Back', root_path %>
+
 <% if user_signed_in? %>
   <% if current_user.id == @movie.user_id %>
     <%= link_to 'Edit', edit_movie_path(@movie) %>
@@ -29,3 +30,13 @@
         method: :delete, data: {confirm: 'Are you sure?'} %>
   <% end %>
 <% end %>
+
+<script>
+  $('.review-rating').raty({
+    readOnly: true,
+    score: function(){
+      return $(this).attr('data-score')
+    },
+    path: '/assets/'
+  });
+</script>
