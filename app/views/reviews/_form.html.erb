@@ -1,5 +1,15 @@
 <%= simple_form_for([@movie, @movie.reviews.build]) do |form| %>
-  <%= form.input :rating %>
+  <div class="rating-form">
+    <label>Rating</label>
+  </div>
+  <!-- <%= form.input :rating %> -->
   <%= form.input :comment %>
   <%= form.button :submit %>
 <% end %>
+
+<script>
+  $('.rating-form').raty({
+    path: '/assets/',
+    scoreName: 'review[rating]'
+  });
+</script>
